@@ -128,6 +128,16 @@ CREATE TABLE `todo2` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `todo3`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `todo3` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -156,3 +166,4 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (2,'0001_01_01_0000
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (3,'0001_01_01_000002_create_jobs_table',1);
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (4,'2024_10_09_124015_create_todo_table',2);
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (5,'2024_10_09_124851_create_todo2_table',3);
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (6,'2024_10_09_125110_create_todo3_table',4);
